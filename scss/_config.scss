@@ -1,0 +1,44 @@
+$primary-color:#272727;
+$secondary-color:#ff652f;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin transition-ease {
+    transition:  all 0.5  ease-out;
+    -webkit-transition:  all 0.5  ease-out;
+    -moz-transition:  all 0.5  ease-out;
+    -ms-transition:  all 0.5  ease-out;
+    -o-transition:  all 0.5  ease-out;
+}
+
+
+@function set-text-color($color){
+    @if(lightness($color)>40%){
+        @return black;
+    }@else{
+        @return white;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width:768px){
+        @content ;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width:1024px){
+        @content ;
+    }
+}
+
+
+@mixin media-xlg {
+    @media screen and (min-width:1600px){
+        @content ;
+    }
+}

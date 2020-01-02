@@ -1,0 +1,64 @@
+.projects {
+    padding-bottom: 2rem;
+
+    &__bio-image {
+        height: 30vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        background-image: url(/img/profile.jpg);
+        background-size: 100% 95%;
+        background-repeat: no-repeat;
+
+        .text-secondary {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__items {
+        width: 60vw;
+        margin: 2rem auto 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+    &__item{
+        position: relative;
+        cursor: pointer;
+
+        img{
+            width: 100%;
+        }
+    }
+
+
+    &__btns{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-evenly;
+       width: 100%;
+       border-bottom: $secondary-color solid 10px;
+       margin-bottom: 1rem;
+       font-weight: 700;
+    }
+
+
+
+    .social-icons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        transform: rotate(90deg);
+        translate: (-3rem, -5rem);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+
+    }
+}

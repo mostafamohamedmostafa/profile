@@ -1,0 +1,24 @@
+.contact {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/img/718.gif);
+    background-size: cover;
+    align-items: center;
+    top:40vh;
+    background-repeat: no-repeat;
+
+    h2{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        font-size: 2rem;
+
+    }
+}

@@ -1,0 +1,509 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-image: url(/img/profile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home__name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  border-bottom: 2px solid white;
+}
+
+.home__name--last {
+  color: #ff652f;
+  font-weight: 700;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  height: 25px;
+  width: 30px;
+  cursor: pointer;
+  transition: all 0.5  ease-out;
+  -webkit-transition: all 0.5  ease-out;
+  -moz-transition: all 0.5  ease-out;
+  -ms-transition: all 0.5  ease-out;
+  -o-transition: all 0.5  ease-out;
+}
+
+.menu-btn__burger {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  width: 20px;
+  height: 4px;
+  background-color: green;
+  transition: all 0.5  ease-out;
+  -webkit-transition: all 0.5  ease-out;
+  -moz-transition: all 0.5  ease-out;
+  -ms-transition: all 0.5  ease-out;
+  -o-transition: all 0.5  ease-out;
+}
+
+.menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 25px;
+  height: 5px;
+  background-color: yellow;
+  transition: all 0.5  ease-out;
+  -webkit-transition: all 0.5  ease-out;
+  -moz-transition: all 0.5  ease-out;
+  -ms-transition: all 0.5  ease-out;
+  -o-transition: all 0.5  ease-out;
+}
+
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 15px;
+  height: 3px;
+  background-color: red;
+  transition: all 0.5  ease-out;
+  -webkit-transition: all 0.5  ease-out;
+  -moz-transition: all 0.5  ease-out;
+  -ms-transition: all 0.5  ease-out;
+  -o-transition: all 0.5  ease-out;
+}
+
+.menu-btn__burger.open {
+  transform: rotate(720deg);
+  background: transparent;
+  -webkit-transform: rotate(720deg);
+  -moz-transform: rotate(720deg);
+  -ms-transform: rotate(720deg);
+  -o-transform: rotate(720deg);
+}
+
+.menu-btn__burger.open::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  translate: 5px, 8px;
+}
+
+.menu-btn__burger.open::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  translate: 3px, -7px;
+}
+
+.nav {
+  position: fixed;
+  text-align: center;
+  text-justify: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+  margin: 1rem;
+  width: 100%;
+  list-style: none;
+  padding: 10px;
+  margin: 15px;
+  line-height: 2rem;
+}
+
+.nav.open {
+  visibility: visible;
+}
+
+.nav .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  list-style: none;
+  padding: 1rem;
+  background-color: #272727;
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transition: all 0.5  ease-out;
+  -webkit-transition: all 0.5  ease-out;
+  -moz-transition: all 0.5  ease-out;
+  -ms-transition: all 0.5  ease-out;
+  -o-transition: all 0.5  ease-out;
+}
+
+.nav .menu-nav.open {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+
+.nav .menu-nav__link {
+  display: inline-block;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+}
+
+.nav .menu-nav__link a {
+  color: red;
+}
+
+.nav .menu-nav__link a:hover {
+  color: yellow;
+}
+
+.nav .menu-nav__link:hover {
+  color: 128;
+}
+
+.about {
+  padding-bottom: 2rem;
+}
+
+.about__bio-image {
+  height: 50vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-image: url(/img/profile.jpg);
+  background-size: 100% 95%;
+  background-repeat: no-repeat;
+}
+
+.about__bio-image p {
+  margin: 0.9rem;
+}
+
+.about__bio {
+  width: 80%;
+  text-align: center;
+}
+
+.about__bio .text-secondary {
+  padding-bottom: 1rem;
+}
+
+.about .jobs {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.about .jobs__job {
+  background: #676767;
+  border-bottom: 5px solid #ff652f;
+  border-top: solid 5px gold;
+  border-right: solid 3px green;
+  border-left: solid 3px indigo;
+  padding: 0.5rem;
+}
+
+.about .jobs__job h2, .about .jobs__job h3 {
+  margin: 0.5rem 0;
+}
+
+.about .jobs__job h6 {
+  margin: 0.3rem 0;
+}
+
+.about .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about footer {
+  transform: rotate(90deg);
+  translate: -3rem, -5rem;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+.projects {
+  padding-bottom: 2rem;
+}
+
+.projects__bio-image {
+  height: 30vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-image: url(/img/profile.jpg);
+  background-size: 100% 95%;
+  background-repeat: no-repeat;
+}
+
+.projects__bio-image .text-secondary {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.projects__items {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.projects__item {
+  position: relative;
+  cursor: pointer;
+}
+
+.projects__item img {
+  width: 100%;
+}
+
+.projects__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  border-bottom: #ff652f solid 10px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.projects .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects footer {
+  transform: rotate(90deg);
+  translate: -3rem, -5rem;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+.contact {
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url(/img/718.gif);
+  background-size: cover;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 40vh;
+  background-repeat: no-repeat;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contact__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+  }
+  .nav .nav-menu {
+    display: block;
+    transform: translateY(0);
+    height: 100%;
+    background-color: transparent;
+    text-align: right;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+  .nav .nav-menu__item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .nav-menu__link {
+    font-size: 1.5rem;
+  }
+  .about__bio {
+    font-size: 2rem;
+  }
+  .projects__bio-image {
+    height: 40vh;
+  }
+  .projects__items {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .text-secondary {
+    font-size: 3rem;
+  }
+  .contact__list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projects__items {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .contact__list {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+body {
+  background: #272727;
+  color: white;
+  height: 100vh;
+  line-height: 1;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+
+.text-secondary {
+  color: #ff652f;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  font-weight: 100%;
+}
+
+main .socail-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+main .socail-icons a {
+  padding: 1rem;
+  transition: all 0.5  ease-out;
+  -webkit-transition: all 0.5  ease-out;
+  -moz-transition: all 0.5  ease-out;
+  -ms-transition: all 0.5  ease-out;
+  -o-transition: all 0.5  ease-out;
+}
+
+main .socail-icons a:hover {
+  color: #ff652f;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1rem;
+  padding: 1rem;
+  color: white;
+  text-align: right;
+}
+/*# sourceMappingURL=main.css.map */
